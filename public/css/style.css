@@ -1,0 +1,228 @@
+/* styles.css */
+body {
+    font-family: "Montserrat", sans-serif;
+    height: 100%;
+    background-color: black; /* Set background color to black */
+    color: white; /* Set text color to white */
+}
+
+h2 span {
+    color: greenyellow;
+}
+
+.main-content {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.home-heading {
+    position: absolute;
+    top: 42vh;
+    left: 22vh;
+    text-align: left;
+}
+
+.home-heading h1 {
+    font-family: "Mogra", system-ui;
+    font-size: 3rem;
+    background-image: linear-gradient(to right, #6528f7 10%, #a076f9 30%, #f2613f 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.home-buttons {
+    display: flex;
+    gap: 1rem;
+    padding-top: 2vh;
+}
+
+.home-buttons button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background: #a076f9;
+    font-family: "Montserrat", sans-serif;
+    box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+}
+
+.home-buttons button::after {
+    content: " ";
+    width: 0%;
+    height: 100%;
+    color: white;
+    background: #6528f7;
+    position: absolute;
+    transition: all 0.4s ease-in-out;
+    right: 0;
+}
+
+.home-buttons button:hover::after {
+    right: auto;
+    left: 0;
+    width: 100%;
+}
+
+.home-buttons button span {
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    padding: 18px 25px;
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    z-index: 20;
+}
+
+.home-hero {
+    display: flex;
+}
+
+.right {
+    flex: 1;
+}
+
+.main-icon {
+    position: absolute;
+    top: 300px;
+    right: 150px;
+    width: 400px;
+}
+
+.home-icon {
+    color: #f2613f;
+    position: absolute;
+    font-size: 3rem;
+}
+
+.icon-1 {
+    top: 250px;
+    right: 300px;
+    color: #a076f9;
+}
+
+.icon-2 {
+    top: 260px;
+    right: 400px;
+}
+
+.icon-3 {
+    top: 410px;
+    right: 100px;
+    color: #f2613f;
+}
+
+.icon-4 {
+    top: 660px;
+    right: 280px;
+    color: #a076f9;
+}
+
+.icon-5 {
+    top: 650px;
+    right: 520px;
+    color: magenta;
+}
+
+.icon-6 {
+    top: 630px;
+    right: 140px;
+}
+
+.icon-7 {
+    top: 315px;
+    right: 520px;
+    color: #a076f9;
+}
+
+.icon-8 {
+    top: 530px;
+    right: 540px;
+}
+
+.icon-9 {
+    top: 300px;
+    color: magenta;
+    right: 160px;
+}
+
+.icon-10 {
+    top: 690px;
+    right: 400px;
+}
+
+.icon-11 {
+    top: 425px;
+    right: 550px;
+    color: magenta;
+}
+
+.icon-12 {
+    top: 525px;
+    color: magenta;
+    right: 110px;
+}
+
+nav {
+    justify-content: space-between;
+    align-items: center;
+    height: 7vh;
+    padding: 0 4vw;
+    position: relative;
+    /* TODO: find better alternatives for blur shadow, this doesn't work */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+nav::after {
+    content: "";
+    position: absolute;
+    top: 6.8vh;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: linear-gradient(to right, #6528f7 10%, #a076f9 30%, #f2613f 100%);
+}
+
+nav,
+.nav-links {
+    display: flex;
+}
+
+.nav-links {
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+a {
+    color: white; /* Set anchor color to white */
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+a:hover {
+    color: #a076f9;
+    text-decoration: none;
+    text-underline-offset: 1rem;
+}
+
+.user-icon:hover {
+    color: #a076f9;
+}
+
+.logo {
+    font-size: 2rem;
+    span:hover {
+        color: white;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: none;
+    }
+}

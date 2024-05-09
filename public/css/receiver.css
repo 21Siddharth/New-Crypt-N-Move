@@ -1,0 +1,200 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  height: 100%;
+  background-color: black; /* Set background color to black */
+  
+}
+
+h2 span {
+  color: greenyellow;
+}
+.screen {
+    display: none;
+  }
+  .screen.active {
+    display: block;
+  }
+  .app {
+    position: fixed;
+    top: 75px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 50%;
+  }
+  
+  .join-screen .form {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 50px;
+  }
+  .join-screen .form .form-input {
+    margin: 10px 0px;
+  }
+  .join-screen .form h2 {
+    font-size: 40px;
+    line-height: 45px;
+    color:#6528f7;
+    margin-bottom: 20px;
+  }
+  .join-screen .form button {
+    background: #111;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 20px;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  .join-screen .form #join-id b {
+    color: #222;
+    display: block;
+    margin-top: 20px;
+  }
+  .join-screen .form #join-id span {
+    display: inline-block;
+    font-size: 25px;
+    font-family: monospace;
+    color: #222;
+    padding: 10px;
+    border: 1px solid #111;
+    margin-top: 5px;
+  }
+  .join-screen .form label {
+    color: #222;
+    font-size: 18px;
+  }
+  .join-screen .form input {
+    display: block;
+    margin: 10px 0px;
+    width: 100%;
+    max-width: 200px;
+    border: 1px solid #111;
+    color: #111;
+    font-size: 20px;
+    padding: 10px;
+  }
+  
+  .fs-screen {
+    padding: 20px;
+  }
+  .fs-screen .file-input {
+    width: 100%;
+    border: 2px dashed #555;
+  }
+  .fs-screen .file-input label {
+    display: block;
+    width: 100%;
+    padding: 40px 50px;
+    text-align: center;
+    color: #111;
+    font-size: 18px;
+  }
+  .fs-screen .file-input input {
+    display: none;
+  }
+  .fs-screen .files-list {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .fs-screen .files-list .title {
+    width: 100%;
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  .fs-screen .files-list .item {
+    width: 33.33%;
+    min-width: 200px;
+    border: 1px solid #eee;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.05);
+  }
+  .fs-screen .files-list .item .progress {
+      padding: 30px;
+      text-align: center;
+      font-size:50px;
+      font-family: monospace;
+      color: #222;
+  }
+  .fs-screen .files-list .item .filename {
+      font-size: 16px;
+      padding: 5px;
+      border-top: 1px solid #eee;
+  }
+  nav {
+    justify-content: space-between;
+    align-items: center;
+    height: 7vh;
+    padding: 0 4vw;
+    position: relative;
+    /* TODO: find better alternatives for blur shadow, this doesn't work */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+nav::after {
+    content: "";
+    position: absolute;
+    top: 6.8vh;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: linear-gradient(to right, #6528f7 10%, #a076f9 30%, #f2613f 100%);
+}
+
+nav,
+.nav-links {
+    display: flex;
+}
+
+.nav-links {
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+a {
+    color: white; /* Set anchor color to white */
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+a:hover {
+    color: #a076f9;
+    text-decoration: none;
+    text-underline-offset: 1rem;
+}
+
+.user-icon:hover {
+    color: #a076f9;
+}
+
+.logo {
+    font-size: 2rem;
+    span:hover {
+        color: white;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: none;
+    }
+}
+#receiver-start-con-btn {
+  background-image: linear-gradient(to right, #ff00ff, #a076f9); /* Linear gradient */
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+#receiver-start-con-btn:hover {
+  background-color: magenta; /* Change to magenta on hover */
+}
