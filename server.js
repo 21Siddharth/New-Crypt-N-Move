@@ -28,10 +28,10 @@ io.on("connection", function (socket) {
 });
 
 app.get("/send", (req, res) => {
-  res.sendFile(path.join(__dirname, "/public/sender.html"));
+  res.sendFile(path.join(__dirname, "/sender.html"));
 });
 app.get("/receive",(req,res)=> {
-  res.sendFile(path.join(__dirname,"/public/receiver.html"))
+  res.sendFile(path.join(__dirname,"/receiver.html"))
 })
 server.listen(5000, () => {
   console.log("Server is running on port 5000");
