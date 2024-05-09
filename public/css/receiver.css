@@ -24,20 +24,45 @@ h2 span {
   }
   
   .join-screen .form {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 50px;
-  }
-  .join-screen .form .form-input {
-    margin: 10px 0px;
-  }
+    text-align: center; /* Center text inside the form */
+}
+  
   .join-screen .form h2 {
     font-size: 40px;
     line-height: 45px;
     color:#6528f7;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
   }
+
+  .join-screen .form button {
+    background-color: white;
+    border: 0;
+    padding: 1.5rem 2rem;
+    font-size: 4rem;
+    font-family: monospace;
+    box-shadow: 0px 5px 10px rgba(darken(dodgerblue, 40%));
+    transition: all 0.3s;
+    cursor: pointer;
+    border-radius: 5px;
+    border-bottom: 4px solid lighten(gray, 70%);
+  }
+  
+  .join-screen .form button:hover {
+    box-shadow: 0px 15px 25px -5px rgba(darken(dodgerblue, 40%));
+    transform: scale(1.03);
+  }
+  
+  .join-screen .form button:active {
+    box-shadow: 0px 4px 8px rgba(darken(dodgerblue, 30%));
+    transform: scale(0.98);
+  }
+  
+  /* Additional properties from your existing CSS */
   .join-screen .form button {
     background: #111;
     padding: 10px 20px;
@@ -48,6 +73,7 @@ h2 span {
     outline: none;
     cursor: pointer;
   }
+  
   .join-screen .form #join-id b {
     color: #222;
     display: block;
@@ -63,7 +89,7 @@ h2 span {
     margin-top: 5px;
   }
   .join-screen .form label {
-    color: #222;
+    color: #31be55;
     font-size: 18px;
   }
   .join-screen .form input {
@@ -104,10 +130,12 @@ h2 span {
   }
   .fs-screen .files-list .title {
     width: 100%;
-    font-size: 18px;
-    color: #555;
+    font-size: 40px;
+    color: #fff;
     margin-bottom: 20px;
-  }
+    margin-left: 45%;
+    text-align: justify;
+}
   .fs-screen .files-list .item {
     width: 33.33%;
     min-width: 200px;
@@ -119,13 +147,14 @@ h2 span {
       text-align: center;
       font-size:50px;
       font-family: monospace;
-      color: #222;
+      color: #ffffff;
   }
   .fs-screen .files-list .item .filename {
-      font-size: 16px;
-      padding: 5px;
-      border-top: 1px solid #eee;
-  }
+    font-size: 16px;
+    padding: 5px; 
+    border-top: 1px solid #eee;
+    color: white;
+}
   nav {
     justify-content: space-between;
     align-items: center;
