@@ -1,228 +1,400 @@
 /* styles.css */
 body {
-    font-family: "Montserrat", sans-serif;
-    height: 100%;
-    background-color: black; /* Set background color to black */
-    color: white; /* Set text color to white */
+  font-family: "Montserrat", sans-serif;
+  height: 100%;
+  background-color: black; /* Set background color to black */
+  color: white; /* Set text color to white */
+}
+
+.light-mode a {
+  color: black; /* Set anchor color to white */
+  text-decoration: none;
+}
+
+.light-mode a:hover {
+  color: #a076f9;
+  text-decoration: none;
+  text-underline-offset: 1rem;
+}
+
+.user-icon:hover {
+  color: #a076f9;
+}
+
+.light-mode logo {
+  font-size: 2rem;
+  span:hover {
+    color: black;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.light-mode {
+  background-color: #f0f0f0;
+  color: black;
+}
+
+.light-mode h2 span {
+  color: #5200d8;
+}
+
+.light-mode .slider {
+  background-color: var(--background);
+}
+
+.light-mode .slider:before {
+  background: var(--background);
+  box-shadow: inset 8px -4px 0px 0px #fff000;
+}
+
+.light-mode input:checked + .slider {
+  background-color: #f2613f;
+}
+
+.light-mode input:checked + .slider:before {
+  box-shadow: inset 15px -4px 0px 15px #fff000;
 }
 
 h2 span {
-    color: greenyellow;
+  color: #adff2f;
 }
 
 .main-content {
-    text-align: center;
-    margin: 0 auto;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .home-heading {
-    position: absolute;
-    top: 42vh;
-    left: 22vh;
-    text-align: left;
+  position: absolute;
+  top: 42vh;
+  left: 22vh;
+  text-align: left;
 }
 
 .home-heading h1 {
-    font-family: "Mogra", system-ui;
-    font-size: 3rem;
-    background-image: linear-gradient(to right, #6528f7 10%, #a076f9 30%, #f2613f 100%);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+  font-family: "Mogra", system-ui;
+  font-size: 3rem;
+  background-image: linear-gradient(
+    to right,
+    #6528f7 10%,
+    #a076f9 30%,
+    #f2613f 100%
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .home-buttons {
-    display: flex;
-    gap: 1rem;
-    padding-top: 2vh;
+  display: flex;
+  gap: 1rem;
+  padding-top: 2vh;
+  align-items: center;
 }
 
 .home-buttons button {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    background: #a076f9;
-    font-family: "Montserrat", sans-serif;
-    box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    cursor: pointer;
-    border: none;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: #a076f9;
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
 }
 
 .home-buttons button::after {
-    content: " ";
-    width: 0%;
-    height: 100%;
-    color: white;
-    background: #6528f7;
-    position: absolute;
-    transition: all 0.4s ease-in-out;
-    right: 0;
+  content: " ";
+  width: 0%;
+  height: 100%;
+  color: white;
+  background: #6528f7;
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  right: 0;
 }
 
 .home-buttons button:hover::after {
-    right: auto;
-    left: 0;
-    width: 100%;
+  right: auto;
+  left: 0;
+  width: 100%;
 }
 
 .home-buttons button span {
-    text-align: center;
-    text-decoration: none;
-    width: 100%;
-    padding: 18px 25px;
-    color: #fff;
-    font-size: 1.3em;
-    font-weight: 700;
-    letter-spacing: 0.3em;
-    z-index: 20;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  padding: 18px 25px;
+  color: #fff;
+  font-size: 1.3em;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  z-index: 20;
 }
 
 .home-hero {
-    display: flex;
+  display: flex;
 }
 
 .right {
-    flex: 1;
+  flex: 1;
 }
 
 .main-icon {
-    position: absolute;
-    top: 300px;
-    right: 150px;
-    width: 400px;
+  position: absolute;
+  top: 300px;
+  right: 150px;
+  width: 400px;
 }
 
 .home-icon {
-    color: #f2613f;
-    position: absolute;
-    font-size: 3rem;
+  color: #f2613f;
+  position: absolute;
+  font-size: 3rem;
 }
 
 .icon-1 {
-    top: 250px;
-    right: 300px;
-    color: #a076f9;
+  top: 250px;
+  right: 300px;
+  color: #a076f9;
 }
 
 .icon-2 {
-    top: 260px;
-    right: 400px;
+  top: 260px;
+  right: 400px;
 }
 
 .icon-3 {
-    top: 410px;
-    right: 100px;
-    color: #f2613f;
+  top: 410px;
+  right: 100px;
+  color: #f2613f;
 }
 
 .icon-4 {
-    top: 660px;
-    right: 280px;
-    color: #a076f9;
+  top: 660px;
+  right: 280px;
+  color: #a076f9;
 }
 
 .icon-5 {
-    top: 650px;
-    right: 520px;
-    color: magenta;
+  top: 650px;
+  right: 520px;
+  color: magenta;
 }
 
 .icon-6 {
-    top: 630px;
-    right: 140px;
+  top: 630px;
+  right: 140px;
 }
 
 .icon-7 {
-    top: 315px;
-    right: 520px;
-    color: #a076f9;
+  top: 315px;
+  right: 520px;
+  color: #a076f9;
 }
 
 .icon-8 {
-    top: 530px;
-    right: 540px;
+  top: 530px;
+  right: 540px;
 }
 
 .icon-9 {
-    top: 300px;
-    color: magenta;
-    right: 160px;
+  top: 300px;
+  color: magenta;
+  right: 160px;
 }
 
 .icon-10 {
-    top: 690px;
-    right: 400px;
+  top: 690px;
+  right: 400px;
 }
 
 .icon-11 {
-    top: 425px;
-    right: 550px;
-    color: magenta;
+  top: 425px;
+  right: 550px;
+  color: magenta;
 }
 
 .icon-12 {
-    top: 525px;
-    color: magenta;
-    right: 110px;
+  top: 525px;
+  color: magenta;
+  right: 110px;
 }
 
 nav {
-    justify-content: space-between;
-    align-items: center;
-    height: 7vh;
-    padding: 0 4vw;
-    position: relative;
-    /* TODO: find better alternatives for blur shadow, this doesn't work */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  justify-content: space-between;
+  align-items: center;
+  height: 7vh;
+  padding: 0 4vw;
+  position: relative;
+  /* TODO: find better alternatives for blur shadow, this doesn't work */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 nav::after {
-    content: "";
-    position: absolute;
-    top: 6.8vh;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    background: linear-gradient(to right, #6528f7 10%, #a076f9 30%, #f2613f 100%);
+  content: "";
+  position: absolute;
+  top: 6.8vh;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: linear-gradient(to right, #6528f7 10%, #a076f9 30%, #f2613f 100%);
 }
 
 nav,
 .nav-links {
-    display: flex;
+  display: flex;
 }
 
 .nav-links {
-    gap: 2rem;
-    list-style: none;
-    font-size: 1.5rem;
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
 }
 
 a {
-    color: white; /* Set anchor color to white */
-    text-decoration: none;
-    text-decoration-color: white;
+  color: white; /* Set anchor color to white */
+  text-decoration: none;
+  text-decoration-color: white;
 }
 
 a:hover {
-    color: #a076f9;
-    text-decoration: none;
-    text-underline-offset: 1rem;
+  color: #a076f9;
+  text-decoration: none;
+  text-underline-offset: 1rem;
 }
 
 .user-icon:hover {
-    color: #a076f9;
+  color: #a076f9;
 }
 
 .logo {
-    font-size: 2rem;
-    span:hover {
-        color: white;
-        text-decoration: none;
-    }
-    a:hover {
-        text-decoration: none;
-    }
+  font-size: 2rem;
+  span {
+    color: white;
+  }
+}
+
+.light-mode .logo span {
+  color: black;
+}
+/* The switch - the box around the slider */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  --background: #6528f7;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--background);
+  transition: 0.5s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 50%;
+  left: 10%;
+  bottom: 15%;
+  box-shadow: inset 8px -4px 0px 0px #fff000;
+  background: var(--background);
+  transition: 0.5s;
+}
+
+input:checked + .slider {
+  background-color: #f2613f;
+}
+
+input:checked + .slider:before {
+  transform: translateX(100%);
+  box-shadow: inset 15px -4px 0px 15px #fff000;
+}
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal-content {
+  background-color: black;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 5px;
+}
+
+.light-mode .modal {
+  background-color: rgba(255, 255, 255, 0.3); /* White background */
+}
+
+.light-mode .modal-content {
+  background-color: white; /* White background */
+  color: black; /* Text color */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Info Icon Styles */
+.info-icon {
+  cursor: pointer;
+  display: inline-block;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  background-color: #a076f9;
+  font-size: 20px;
+}
+
+.info-icon:hover {
+  background-color: #f2613f;
 }
