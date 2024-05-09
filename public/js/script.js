@@ -15,3 +15,26 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+// Open the modal
+function openModal() {
+  document.getElementById("modal").style.display = "block";
+  // Add event listener to close modal on clicking anywhere outside the modal content
+  document.addEventListener("click", closeModalOutside);
+}
+
+// Close the modal
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
+  // Remove event listener when modal is closed
+  document.removeEventListener("click", closeModalOutside);
+}
+
+// Close modal when clicking anywhere outside the modal content
+function closeModalOutside(event) {
+  var modal = document.getElementById("modal");
+  if (event.target == modal) {
+    modal.style.display = "none";
+    // Remove event listener when modal is closed
+    document.removeEventListener("click", closeModalOutside);
+  }
+}

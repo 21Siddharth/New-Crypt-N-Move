@@ -24,7 +24,7 @@
             <span class="user-icon"></span>
           </li>
           <label class="switch">
-            <input type="checkbox" id="themeToggle"/>
+            <input type="checkbox" id="themeToggle" />
             <span class="slider"></span>
           </label>
         </ul>
@@ -49,6 +49,19 @@
                   <span>Receive</span>
                 </button>
               </a>
+              <!-- Info Icon -->
+              <div class="info-icon" onclick="openModal()">
+                <span><b>i</b></span>
+              </div>
+
+              <!-- Modal -->
+              <div id="modal" class="modal">
+                <div class="modal-content">
+                  <span class="close" onclick="closeModal()">&times;</span>
+                  <p>To Send Files to someone, Click SEND</p>
+                  <p>To Receive Files from someone, Click RECEIVE</p>
+                </div>
+              </div>
             </div>
           </div>
           <div class="right">
