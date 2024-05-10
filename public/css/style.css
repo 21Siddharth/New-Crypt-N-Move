@@ -144,13 +144,13 @@ h2 span {
 
 .right {
   flex: 1;
+  z-index: -1;
 }
-
 .main-icon {
   position: absolute;
-  top: 300px;
-  right: 150px;
-  width: 400px;
+  top: 225px;
+  right: 175px;
+  width: 500px;
 }
 
 .home-icon {
@@ -397,4 +397,21 @@ input:checked + .slider:before {
 
 .info-icon:hover {
   background-color: #f2613f;
+}
+@media only screen and (max-width: 600px) {
+  .home-heading {
+    position: relative; /* Change position to relative */
+    top: auto; /* Remove top positioning */
+    left: auto; /* Remove left positioning */
+    text-align: center; /* Center align text */
+  }
+
+  .main-icon {
+    position: static; /* Change position to static */
+    margin-top: 20px; /* Add margin for spacing */
+  }
+
+  .right {
+    background-image: none; /* Remove background image */
+  }
 }
