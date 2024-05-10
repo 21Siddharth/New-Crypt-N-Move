@@ -12,18 +12,18 @@ body {
 }
 
 .light-mode a {
-  color: black; 
+  color: black;
   text-decoration: none;
 }
 
 .light-mode a:hover {
-  color: #a076f9; 
+  color: #a076f9;
   text-decoration: none;
   text-underline-offset: 1rem;
 }
 
 .user-icon:hover {
-  color: #a076f9; 
+  color: #a076f9;
 }
 
 .light-mode logo {
@@ -31,7 +31,7 @@ body {
 }
 
 .light-mode .logo span {
-  color: black; 
+  color: black;
 }
 
 h2 span {
@@ -151,9 +151,17 @@ input:checked + .slider:before {
 }
 
 .form h2 {
+  color: #a076f9;
   font-size: 40px;
   margin-bottom: 1rem;
-  font-weight: 100;
+  font-weight: bold;
+}
+
+.light-mode .form h2 {
+  color: #6528f7;
+  font-size: 40px;
+  margin-bottom: 1rem;
+  font-weight: bold;
 }
 
 .form button {

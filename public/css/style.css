@@ -143,14 +143,15 @@ h2 span {
 }
 
 .right {
+  background-image: url(../images/home-2.png);
   flex: 1;
   z-index: -1;
-}
-.main-icon {
   position: absolute;
-  top: 225px;
+  top: 275px;
   right: 175px;
   width: 500px;
+  height: 60%;
+  background-repeat: no-repeat;
 }
 
 .home-icon {
