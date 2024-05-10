@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded",function(){
           {
             filename: file.name,
             total_buffer_size: buffer.length,
-            buffer_size: 1024,
+            buffer_size: 51200,
           },
           buffer,
           el.querySelector(".progress")
