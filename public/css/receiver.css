@@ -286,14 +286,15 @@ a:hover {
 
 .logo {
   font-size: 2rem;
-  span:hover {
+  span {
     color: white;
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: none;
   }
 }
+
+.light-mode .logo span {
+  color: black;
+}
+
 #receiver-start-con-btn {
   background-image: linear-gradient(
     to right,

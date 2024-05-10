@@ -128,13 +128,13 @@ input:checked + .slider:before {
 
 .logo {
   font-size: 2rem;
-  span:hover {
+  span {
     color: white;
-    text-decoration: none;
   }
-  a:hover {
-    text-decoration: none;
-  }
+}
+
+.light-mode .logo span {
+  color: black;
 }
 
 .form {
