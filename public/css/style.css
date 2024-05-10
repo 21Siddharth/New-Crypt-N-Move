@@ -234,7 +234,7 @@ nav {
   padding: 0 4vw;
   position: relative;
   /* TODO: find better alternatives for blur shadow, this doesn't work */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); */
 }
 
 nav::after {
