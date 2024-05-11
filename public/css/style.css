@@ -71,7 +71,7 @@ h2 span {
 .home-heading {
   position: absolute;
   top: 42vh;
-  left: 22vh;
+  left: 8vw;
   text-align: left;
 }
 
@@ -148,7 +148,7 @@ h2 span {
   z-index: -1;
   position: absolute;
   top: 275px;
-  right: 175px;
+  right: 100px;
   width: 500px;
   height: 60%;
   background-repeat: no-repeat;
@@ -416,7 +416,22 @@ input:checked + .slider:before {
     background-image: none; /* Remove background image */
   }
 }
-@media (max-width: 900px) {
+@media (max-width: 1400px) {
+  .left {
+    position: absolute;
+    left: 5%;
+    top: 40%;
+  }
+  .right {
+    right: 5%;
+    top: 30%;
+  }
+  .home-buttons {
+    display: flex;
+    gap: 1.5rem;
+  }
+}
+@media (max-width: 1000px) {
   .main-content .home-tagline {
     font-size: 2rem;
     padding: 0 30px;
