@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function () {
   console.log("content loaded");
   const checkbox = document.getElementById("themeToggle");
@@ -26,7 +27,8 @@ const socket = io();
   }
 
   async function uploadFileToVirusTotal(fileData) {
-    const API_KEY = 'df3e3c3db83163d11a11b6f2172745bc89a9c3775d09c359b5e29d73e58e9a4b'; // Replace with your actual VirusTotal API key
+    const KEY = process.env.API_KEY;
+    const API_KEY = KEY;
     const formData = new FormData();
     formData.append('file', fileData);
 
