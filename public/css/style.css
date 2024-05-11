@@ -416,3 +416,31 @@ input:checked + .slider:before {
     background-image: none; /* Remove background image */
   }
 }
+@media (max-width: 900px) {
+  .main-content .home-tagline {
+    font-size: 2rem;
+    padding: 0 30px;
+  }
+  .main-content .home-pointers {
+    font-size: 1.4rem;
+  }
+  .right {
+    background: none;
+  }
+  .left {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+  }
+  .home-buttons {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    /* left: 10%; */
+    button {
+      height: 50px;
+    }
+    /* right: 0; */
+  }
+}
