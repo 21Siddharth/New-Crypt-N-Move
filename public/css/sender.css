@@ -188,14 +188,45 @@ input:checked + .slider:before {
   }
 }
 
+.title{
+  font-size: 3rem;
+  color: #a076f9;
+  margin-left: 4%;
+}
+.light-mode .title{
+  font-size: 3rem;
+  color: #6528f7;
+  margin-left: 4%;
+}
+
+.light-mode .file-input {
+  border: 6px dashed black;
+}
+.file-input {
+  margin: 60px auto;
+  /* margin-bottom: 10px; */
+  width: 80%;
+  height: 200px;
+  /* background: #a076f9; */
+  border: 6px dashed white;
+  font-size: 1rem;
+}
+#file-input{
+  background-color: #a076f9;
+  color: white;
+  position: absolute;
+  /* top: ; */
+  font-size: 1rem;
+}
+
 .file-input label {
   display: block;
-  background-color: #555;
+  background-color: #a076f9;
   color: white;
   padding: 1rem;
   text-align: center;
   cursor: pointer;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
   border-radius: 5px;
 }
 
@@ -211,6 +242,7 @@ input:checked + .slider:before {
   padding: 1rem;
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 .progress {
