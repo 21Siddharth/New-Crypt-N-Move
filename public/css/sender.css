@@ -222,21 +222,33 @@ input:checked + .slider:before {
   border: 6px dashed white;
   font-size: 1rem;
 }
-.file-input-text {
-  position: absolute;
-  /* padding: 80; */
-  top: 20%;
-  left: 48%;
+
+#copy-id-btn {
+  display: inline-block;
+  background-image: linear-gradient(
+    to right,
+    #ff00ff,
+    #a076f9
+  ); /* Linear gradient */
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
 }
+
+#copy-id-btn:focus {
+  outline: none;
+}
+
 #file-input {
   background-color: #a076f9;
   color: white;
-  position: absolute;
-  top: 25%;
-  left: 40%;
-  height: 2rem;
-  /* position: absolute; */
-  /* top: ; */
+  width: 100%;
+  height: 200px;
   font-size: 1rem;
 }
 
