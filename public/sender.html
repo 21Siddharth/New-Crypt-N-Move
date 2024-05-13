@@ -5,6 +5,7 @@
     <title>Crypt-n-Move</title>
     <link rel="stylesheet" type="text/css" href="./css/sender.css" />
     <link rel="icon" type="image/png" href="./images/icon.ico" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
     <script type="text/javascript" src="socket.io/socket.io.js"></script>
@@ -40,8 +41,10 @@
           <h2>Share your files securely</h2>
           <div class="form-input">
             <button id="sender-start-con-btn">Create share room</button>
+            
           </div>
           <div class="form-input" id="join-id"></div>
+          <button id="copy-id-btn" style="display: none"><i class="material-icons">&#xe14d;</i></button>
         </div>
       </div>
 
@@ -61,5 +64,40 @@
         </div>
       </div>
     </div>
+
+    <script>
+      // Get the button element
+      const copyIdButton = document.getElementById("copy-id-btn");
+
+      // Function to copy text to clipboard
+      function copyToClipboard(text) {
+        console.log("copied");
+        const input = document.createElement("textarea");
+        input.value = text;
+        document.body.appendChild(input);
+        input.select();
+        document.execCommand("copy");
+        document.body.removeChild(input);
+      }
+
+      // Event listener for the button click
+      copyIdButton.addEventListener("click", function () {
+        const joinIdElement = document.querySelector("#join-id span");
+        const joinId = joinIdElement.innerText;
+        copyToClipboard(joinId);
+      });
+
+      // Function to show the button when ID is generated
+      function showCopyButton() {
+        copyIdButton.style.display = "block";
+      }
+
+      // Event listener to call the showCopyButton function when ID is generated
+      document
+        .querySelector("#sender-start-con-btn")
+        .addEventListener("click", function () {
+          showCopyButton();
+        });
+    </script>
   </body>
 </html>
