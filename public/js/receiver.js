@@ -26,6 +26,10 @@ const socket = io();
     )}-${Math.trunc(Math.random() * 999)}`;
   }
 
+  function validateJoinID(input) {
+    return /^[0-9-]*$/.test(input);
+  }
+  
   async function uploadFileToVirusTotal(fileData) {
     const KEY = process.env.API_KEY;
     const API_KEY = KEY;
@@ -55,7 +59,7 @@ const socket = io();
   }
 
   async function getFileReportFromVirusTotal(fileID) {
-    const API_KEY = 'df3e3c3db83163d11a11b6f2172745bc89a9c3775d09c359b5e29d73e58e9a4b'; // Replace with your actual VirusTotal API key
+    const API_KEY = 'df3e3c3db83163d11a11b6f2172745bc89a9c3775d09c359b5e29d73e58e9a4b'; 
     const options = {
       method: 'GET',
       headers: {
@@ -120,17 +124,19 @@ const socket = io();
     document
       .querySelector("#receiver-start-con-btn")
       .addEventListener("click", function () {
-        sender_uid = document.querySelector("#join-id").value;
-        if (sender_uid.length == 0) {
-          return;
-        }
-        let joinID = generateID();
-        socket.emit("receiver-join", {
-          sender_uid: sender_uid,
-          uid: joinID,
-        });
-        document.querySelector(".join-screen").classList.remove("active");
-        document.querySelector(".fs-screen").classList.add("active");
+      sender_uid = document.querySelector("#join-id").value.trim(); // Trim to remove leading/trailing spaces
+      if (sender_uid.length === 0 || !validateJoinID(sender_uid)) {
+        alert("Please enter a valid joining ID containing only numbers and dashes.");
+        return;
+      }
+
+      let joinID = generateID();
+      socket.emit("receiver-join", {
+        sender_uid: sender_uid,
+        uid: joinID,
+      });
+      document.querySelector(".join-screen").classList.remove("active");
+      document.querySelector(".fs-screen").classList.add("active");
       });
 
     let fileShare = {};
