@@ -245,21 +245,13 @@ input:checked + .slider:before {
   border: 6px dashed white;
   font-size: 1rem;
 }
-.file-input-text {
-  position: absolute;
-  /* padding: 80; */
-  top: 20%;
-  left: 48%;
-}
+
 #file-input {
   background-color: #a076f9;
   color: white;
-  position: absolute;
   top: 25%;
-  left: 40%;
-  height: 2rem;
-  /* position: absolute; */
-  /* top: ; */
+  height:200px;
+  width: 100%;
   font-size: 1rem;
 }
 
