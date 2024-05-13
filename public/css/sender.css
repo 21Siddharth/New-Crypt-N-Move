@@ -1,367 +1,349 @@
-  /* styles.css */
-  body {
-    font-family: "Montserrat", sans-serif;
-    height: 100%;
-    background-color: black; /* Set background color to black */
-    color: white; /* Set text color to white */
-  }
+/* styles.css */
+body {
+  font-family: "Montserrat", sans-serif;
+  height: 100%;
+  background-color: black; /* Set background color to black */
+  color: white; /* Set text color to white */
+}
 
-  .light-mode {
-    background-color: #f0f0f0;
-    color: black;
-  }
+.light-mode {
+  background-color: #f0f0f0;
+  color: black;
+}
 
-  .light-mode a {
-    color: black;
-    text-decoration: none;
-  }
+.light-mode a {
+  color: black;
+  text-decoration: none;
+}
 
-  .light-mode a:hover {
-    color: #a076f9;
-    text-decoration: none;
-    text-underline-offset: 1rem;
-  }
+.light-mode a:hover {
+  color: #a076f9;
+  text-decoration: none;
+  text-underline-offset: 1rem;
+}
 
-  .user-icon:hover {
-    color: #a076f9;
-  }
+.user-icon:hover {
+  color: #a076f9;
+}
 
-  .light-mode logo {
-    font-size: 2rem;
-  }
+.light-mode logo {
+  font-size: 2rem;
+}
 
-  .light-mode .logo span {
-    color: black;
-  }
+.light-mode .logo span {
+  color: black;
+}
 
-  h2 span {
-    color: greenyellow;
-  }
+h2 span {
+  color: greenyellow;
+}
 
-  .main-content {
-    text-align: center;
-    margin: 0 auto;
-  }
+.main-content {
+  text-align: center;
+  margin: 0 auto;
+}
 
-  .app {
-    width: 100%;
-    height: 100%;
-  }
+.app {
+  width: 100%;
+  height: 100%;
+}
 
-  .switch {
-    font-size: 17px;
-    position: relative;
-    display: inline-block;
-    width: 3.5em;
-    height: 2em;
-  }
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
 
-  .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
 
-  .slider {
-    --background: #6528f7;
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: var(--background);
-    transition: 0.5s;
-    border-radius: 30px;
-  }
+.slider {
+  --background: #6528f7;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--background);
+  transition: 0.5s;
+  border-radius: 30px;
+}
 
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 1.4em;
-    width: 1.4em;
-    border-radius: 50%;
-    left: 10%;
-    bottom: 15%;
-    box-shadow: inset 8px -4px 0px 0px #fff000;
-    background: var(--background);
-    transition: 0.5s;
-  }
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 50%;
+  left: 10%;
+  bottom: 15%;
+  box-shadow: inset 8px -4px 0px 0px #fff000;
+  background: var(--background);
+  transition: 0.5s;
+}
 
-  input:checked + .slider {
-    background-color: #f2613f;
-  }
+input:checked + .slider {
+  background-color: #f2613f;
+}
 
-  input:checked + .slider:before {
-    transform: translateX(100%);
-    box-shadow: inset 15px -4px 0px 15px #fff000;
-  }
+input:checked + .slider:before {
+  transform: translateX(100%);
+  box-shadow: inset 15px -4px 0px 15px #fff000;
+}
 
-  #copy-id-btn {
-    display: inline-block;
-    background-image: linear-gradient(
-      to right,
-      #ff00ff,
-      #a076f9
-    ); /* Linear gradient */
+/* Styling the "Create room" button */
+#sender-start-con-btn {
+  background-image: linear-gradient(
+    to right,
+    #ff00ff,
+    #a076f9
+  ); /* Linear gradient */
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+#sender-start-con-btn:hover {
+  background-color: magenta; /* Change to magenta on hover */
+}
+
+.screen {
+  display: none;
+}
+
+.screen.active {
+  display: block;
+}
+
+.logo {
+  font-size: 2rem;
+  span {
     color: white;
-    padding: 0.75rem 1.5rem;
-    font-weight: 600;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
   }
+}
 
-  #copy-id-btn:focus {
-    outline: none;
-  }
+.light-mode .logo span {
+  color: black;
+}
 
-  /* Styling the "Create room" button */
-  #sender-start-con-btn {
-    background-image: linear-gradient(
-      to right,
-      #ff00ff,
-      #a076f9
-    ); /* Linear gradient */
-    color: white;
-    padding: 0.75rem 1.5rem;
-    font-weight: 600;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease; /* Smooth transition */
-  }
+.form {
+  padding: 2rem;
+}
 
-  #sender-start-con-btn:hover {
-    background-color: magenta; /* Change to magenta on hover */
-  }
+.join-screen .form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  text-align: center;
+}
 
-  .screen {
-    display: none;
-  }
+.form h2 {
+  color: #a076f9;
+  font-size: 40px;
+  line-height: 45px;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
 
-  .screen.active {
-    display: block;
-  }
+.light-mode .form h2 {
+  color: #6528f7;
+  font-size: 40px;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
 
-  .logo {
-    font-size: 2rem;
-    span {
-      color: white;
-    }
-  }
+.join-screen .form button {
+  background-color: white;
+  border: 0;
+  padding: 1.5rem 2rem;
+  font-size: 4rem;
+  box-shadow: 0px 5px 10px rgba(darken(dodgerblue, 40%));
+  transition: all 0.3s;
+  cursor: pointer;
+  border-radius: 5px;
+  border-bottom: 4px solid lighten(gray, 70%);
+}
 
-  .light-mode .logo span {
-    color: black;
-  }
+.join-screen .form button:hover {
+  box-shadow: 0px 15px 25px -5px rgba(darken(dodgerblue, 40%));
+  transform: scale(1.03);
+}
 
-  .form {
-    padding: 2rem;
-  }
+.join-screen .form button:active {
+  box-shadow: 0px 4px 8px rgba(darken(dodgerblue, 30%));
+  transform: scale(0.98);
+}
 
-  .join-screen .form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 50px;
-    text-align: center;
-  }
-
-  .form h2 {
+.form-input {
+  padding: 15px;
+  font-size: 1.5rem;
+  b {
     color: #a076f9;
-    font-size: 40px;
-    line-height: 45px;
-    margin-bottom: 1rem;
-    font-weight: bold;
   }
+}
 
-  .light-mode .form h2 {
+.light-mode .form-input {
+  b {
     color: #6528f7;
-    font-size: 40px;
-    margin-bottom: 1rem;
-    font-weight: bold;
   }
+}
 
-  .join-screen .form button {
-    background-color: white;
-    border: 0;
-    padding: 1.5rem 2rem;
-    font-size: 4rem;
-    box-shadow: 0px 5px 10px rgba(darken(dodgerblue, 40%));
-    transition: all 0.3s;
-    cursor: pointer;
-    border-radius: 5px;
-    border-bottom: 4px solid lighten(gray, 70%);
-  }
+.title {
+  font-size: 3rem;
+  color: #a076f9;
+}
+.light-mode .title {
+  font-size: 3rem;
+  color: #6528f7;
+}
 
-  .join-screen .form button:hover {
-    box-shadow: 0px 15px 25px -5px rgba(darken(dodgerblue, 40%));
-    transform: scale(1.03);
-  }
+.light-mode .file-input {
+  border: 6px dashed black;
+}
+.file-input {
+  margin: 60px auto;
+  /* margin-bottom: 10px; */
+  width: 80%;
+  height: 200px;
+  /* background: #a076f9; */
+  border: 6px dashed white;
+  font-size: 1rem;
+}
+.file-input-text {
+  position: absolute;
+  /* padding: 80; */
+  top: 20%;
+  left: 48%;
+}
+#file-input {
+  background-color: #a076f9;
+  color: white;
+  position: absolute;
+  top: 25%;
+  left: 40%;
+  height: 2rem;
+  /* position: absolute; */
+  /* top: ; */
+  font-size: 1rem;
+}
 
-  .join-screen .form button:active {
-    box-shadow: 0px 4px 8px rgba(darken(dodgerblue, 30%));
-    transform: scale(0.98);
-  }
+.file-input label {
+  display: block;
+  background-color: #a076f9;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  cursor: pointer;
+  margin: 1rem 0;
+  border-radius: 5px;
+}
 
-  .form-input {
-    padding: 15px;
-    font-size: 1.5rem;
-    b {
-      color: #a076f9;
-    }
-  }
+.files-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
 
-  .light-mode .form-input {
-    b {
-      color: #6528f7;
-    }
-  }
+.light-mode .item {
+  border: 5px solid #6528f7;
+  position: absolute;
+  top: 500px;
+  left: 30%;
+  width: 40%;
+  padding: 1rem;
+  border-radius: 5px;
+  text-align: center;
+}
+.item {
+  border: 5px solid #a076f9;
+  position: absolute;
+  top: 500px;
+  left: 30%;
+  width: 40%;
+  padding: 1rem;
+  border-radius: 5px;
+  text-align: center;
+}
 
-  .title {
-    font-size: 3rem;
-    color: #a076f9;
-    margin-left: 4%;
-  }
-  .light-mode .title {
-    font-size: 3rem;
-    color: #6528f7;
-    margin-left: 4%;
-  }
+.progress {
+  text-align: center;
+  font-size: 2rem;
+  font-family: monospace;
+  color: #a076f9;
+}
 
-  .light-mode .file-input {
-    border: 3px dashed black;
-  }
-  .file-input {
-    display: flex; /* Add display flex */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    margin: 60px auto;
-    width: 80%;
-    height: 200px;
-    border: 3px dashed white;
-    font-size: 1rem;
-  }
-  .file-input label {
-    position: absolute;  /* Position the label absolutely */
-    width: 0;
-    height: 0;
-    display:none; /* Hide overflow */
-    opacity: 0; /* Make it transparent */
-    pointer-events: none; /* Disable pointer events */
-  }
-  
+.filename {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+nav {
+  justify-content: space-between;
+  align-items: center;
+  height: 7vh;
+  padding: 0 4vw;
+  position: relative;
+}
 
-  #file-input {
-    background-color: #a076f9;
-    z-index: 1;
+nav::after {
+  content: "";
+  position: absolute;
+  top: 6.8vh;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: linear-gradient(to right, #6528f7 10%, #a076f9 30%, #f2613f 100%);
+}
+
+nav,
+.nav-links {
+  display: flex;
+}
+
+.nav-links {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+a {
+  color: white; /* Set anchor color to white */
+  text-decoration: none;
+  text-decoration-color: white;
+}
+
+a:hover {
+  color: #a076f9;
+  text-decoration: none;
+  text-underline-offset: 1rem;
+}
+
+.user-icon:hover {
+  color: #a076f9;
+}
+
+.logo {
+  font-size: 2rem;
+  span:hover {
     color: white;
-    top: 25%;
-    height:200px;
-    width: 100%;
-    font-size: 1rem;
-  }
-  
-
-  .file-input label {
-    display: block;
-    background-color: #a076f9;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-    cursor: pointer;
-    margin: 1rem 0;
-    border-radius: 5px;
-  }
-
-  .files-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-
-  .item {
-    flex: 1 1 200px;
-    border: 1px solid #eee;
-    padding: 1rem;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-
-  .progress {
-    text-align: center;
-    font-size: 2rem;
-    font-family: monospace;
-    color: white;
-  }
-  .light-mode .progress {
-    text-align: center;
-    font-size: 2rem;
-    font-family: monospace;
-    color: #222;
-  }
-  .filename {
-    font-size: 1rem;
-    margin-top: 0.5rem;
-  }
-  nav {
-    justify-content: space-between;
-    align-items: center;
-    height: 7vh;
-    padding: 0 4vw;
-    position: relative;
-  }
-
-  nav::after {
-    content: "";
-    position: absolute;
-    top: 6.8vh;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    background: linear-gradient(to right, #6528f7 10%, #a076f9 30%, #f2613f 100%);
-  }
-
-  nav,
-  .nav-links {
-    display: flex;
-  }
-
-  .nav-links {
-    gap: 2rem;
-    list-style: none;
-    font-size: 1.5rem;
-  }
-
-  a {
-    color: white; /* Set anchor color to white */
     text-decoration: none;
-    text-decoration-color: white;
   }
-
   a:hover {
-    color: #a076f9;
     text-decoration: none;
-    text-underline-offset: 1rem;
   }
-
-  .user-icon:hover {
-    color: #a076f9;
-  }
-
-  .logo {
-    font-size: 2rem;
-    span:hover {
-      color: white;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: none;
-    }
-  }
+}
