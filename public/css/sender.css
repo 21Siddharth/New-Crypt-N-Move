@@ -204,12 +204,10 @@ input:checked + .slider:before {
 .title {
   font-size: 3rem;
   color: #a076f9;
-  margin-left: 4%;
 }
 .light-mode .title {
   font-size: 3rem;
   color: #6528f7;
-  margin-left: 4%;
 }
 
 .light-mode .file-input {
@@ -256,15 +254,29 @@ input:checked + .slider:before {
 .files-list {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   gap: 1rem;
 }
 
-.item {
-  flex: 1 1 200px;
-  border: 1px solid #eee;
+.light-mode .item {
+  border: 5px solid #6528f7;
+  position: absolute;
+  top: 500px;
+  left: 30%;
+  width: 40%;
   padding: 1rem;
   border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.item {
+  border: 5px solid #a076f9;
+  position: absolute;
+  top: 500px;
+  left: 30%;
+  width: 40%;
+  padding: 1rem;
+  border-radius: 5px;
   text-align: center;
 }
 
@@ -272,7 +284,7 @@ input:checked + .slider:before {
   text-align: center;
   font-size: 2rem;
   font-family: monospace;
-  color: #222;
+  color: #a076f9;
 }
 
 .filename {
