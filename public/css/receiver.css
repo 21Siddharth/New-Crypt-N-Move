@@ -173,64 +173,29 @@ h2 span {
   display: none;
 }
 .fs-screen .files-list {
-  margin-top: 20px;
   display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
 }
 .fs-screen .files-list .title {
-  width: 100%;
   font-size: 40px;
   color: #a076f9;
   margin-bottom: 20px;
-  margin-left: 45%;
-  text-align: justify;
 }
 .light-mode .fs-screen .files-list .title {
-  width: 100%;
   font-size: 40px;
   color: #6528f7;
   margin-bottom: 20px;
-  margin-left: 45%;
-  text-align: justify;
 }
-.fs-screen .files-list .item {
+.item {
   width: 50%;
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  left: 27%;
-  top: 18%;
-  height: 70px;
-  min-width: 200px;
-  /* border: 1px solid #eee; */
+  margin-bottom: 10px;
+  text-align: center;
   box-shadow: 5px 5px #09cee0;
   background-image: linear-gradient(
     to right,
     #09cee0,
     #df6aec
-  ); /* Initial color of the progress bar */
-  animation: fillWater 1s ease forwards; /* Animation settings */
-  transform-origin: bottom center; /* Set the transform origin to bottom center */
-}
-.light-mode .fs-screen .files-list .item {
-  width: 50%;
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  left: 27%;
-  top: 18%;
-  height: 70px;
-  min-width: 200px;
-  /* border: 1px solid #eee; */
-  box-shadow: 5px 5px #b8e2fc;
-  background-image: linear-gradient(
-    to right,
-    #b8e2fc,
-    #ffc1a1
   ); /* Initial color of the progress bar */
   animation: fillWater 1s ease forwards; /* Animation settings */
   transform-origin: bottom center; /* Set the transform origin to bottom center */
@@ -253,40 +218,24 @@ h2 span {
   }
 }
 .light-mode .fs-screen .files-list .item .progress {
-  left: 40%;
-  top: -25px;
-  padding: 10px;
   text-align: center;
   font-size: 50px;
   font-family: monospace;
   color: #5200d8;
 }
 .fs-screen .files-list .item .progress {
-  left: 40%;
-  top: -25px;
-  padding: 10px;
   text-align: center;
   font-size: 50px;
   font-family: monospace;
   color: #ffffff;
 }
 .light-mode .fs-screen .files-list .item .filename {
-  font-size: 2rem;
-  padding: 10px;
-  position: absolute;
-  top: 120%;
-  /* border-top: 1px solid #eee; */
-  /* background-color: white; */
+  font-size: 1rem;
   color: #6528f7;
 }
 .fs-screen .files-list .item .filename {
-  font-size: 2rem;
-  padding: 30px;
-  position: absolute;
-  top: 120%;
-  /* border-top: 1px solid #eee; */
-  /* background-color: black; */
-  color: #a076f9;
+  font-size: 1rem;
+  color: black;
 }
 nav {
   justify-content: space-between;
