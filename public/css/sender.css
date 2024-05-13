@@ -165,21 +165,15 @@ input:checked + .slider:before {
   font-weight: bold;
 }
 
-.join-screen .form button {
-  background-color: white;
-  border: 0;
-  padding: 1.5rem 2rem;
-  font-size: 4rem;
-  box-shadow: 0px 5px 10px rgba(darken(dodgerblue, 40%));
-  transition: all 0.3s;
-  cursor: pointer;
-  border-radius: 5px;
-  border-bottom: 4px solid lighten(gray, 70%);
+.light-mode #copy-id-btn {
+  background-color: transparent;
+  color: #6528f7;
+  border: none;
 }
-
-.join-screen .form button:hover {
-  box-shadow: 0px 15px 25px -5px rgba(darken(dodgerblue, 40%));
-  transform: scale(1.03);
+#copy-id-btn {
+  background-color: black;
+  color: #a076f9;
+  border: none;
 }
 
 .join-screen .form button:active {
