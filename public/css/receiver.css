@@ -54,6 +54,14 @@ h2 span {
   height: 100%;
 }
 
+.light-mode .form-input label {
+  background-color: white;
+  color: #111;
+}
+.receiver-form-text {
+  color: white;
+}
+
 .join-screen .form {
   display: flex;
   flex-direction: column;
@@ -67,14 +75,14 @@ h2 span {
   font-size: 40px;
   line-height: 45px;
   color: #a076f9;
-  margin-bottom: 50px;
+  margin-bottom: 1rem;
 }
 
 .light-mode .join-screen .form h2 {
   font-size: 40px;
   line-height: 45px;
   color: #6528f7;
-  margin-bottom: 50px;
+  margin-bottom: 1rem;
 }
 
 .join-screen .form button {
@@ -126,8 +134,9 @@ h2 span {
   border: 1px solid #111;
   margin-top: 5px;
 }
+
 .join-screen .form label {
-  color: #31be55;
+  color: #b8e2fc;
   font-size: 18px;
 }
 .join-screen .form input {
@@ -169,7 +178,7 @@ h2 span {
 .fs-screen .files-list .title {
   width: 100%;
   font-size: 40px;
-  color: #fff;
+  color: #a076f9;
   margin-bottom: 20px;
   margin-left: 45%;
   text-align: justify;
@@ -177,20 +186,23 @@ h2 span {
 .light-mode .fs-screen .files-list .title {
   width: 100%;
   font-size: 40px;
-  color: purple;
+  color: #6528f7;
   margin-bottom: 20px;
   margin-left: 45%;
   text-align: justify;
 }
 .fs-screen .files-list .item {
   width: 33.33%;
+  position: absolute;
+  left: 35%;
+  top: 100px;
   min-width: 200px;
   border: 1px solid #eee;
   box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.05);
   background-image: linear-gradient(
     to right,
-    #744cb3,
-    #4cb373
+    #0d324d,
+    #7f5a83
   ); /* Initial color of the progress bar */
   animation: fillWater 3s ease forwards; /* Animation settings */
   transform-origin: bottom center; /* Set the transform origin to bottom center */
@@ -202,8 +214,8 @@ h2 span {
   box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.05);
   background-image: linear-gradient(
     to top,
-    blue,
-    pink
+    #b8e2fc,
+    #ffc1a1
   ); /* Initial color of the progress bar */
   animation: fillWater 3s ease forwards; /* Animation settings */
   transform-origin: bottom center; /* Set the transform origin to bottom center */
@@ -231,6 +243,13 @@ h2 span {
   font-size: 50px;
   font-family: monospace;
   color: #ffffff;
+}
+.light-mode .fs-screen .files-list .item .filename {
+  font-size: 16px;
+  padding: 5px;
+  border-top: 1px solid #eee;
+  background-color: white;
+  color: white;
 }
 .fs-screen .files-list .item .filename {
   font-size: 16px;
