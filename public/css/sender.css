@@ -265,27 +265,19 @@ input:checked + .slider:before {
 
 .files-list {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 1rem;
 }
 
-.light-mode .item {
-  border: 5px solid #6528f7;
-  position: absolute;
-  top: 500px;
-  left: 30%;
-  width: 40%;
-  padding: 1rem;
-  border-radius: 5px;
-  text-align: center;
+.light-mode .files-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
 .item {
+  margin-bottom: 10px;
   border: 5px solid #a076f9;
-  position: absolute;
-  top: 500px;
-  left: 30%;
   width: 40%;
   padding: 1rem;
   border-radius: 5px;
